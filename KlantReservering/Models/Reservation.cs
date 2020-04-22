@@ -22,7 +22,8 @@ namespace KlantReservering.Models
         private double _totalPrice;
         #endregion
 
-        public int ID { get => _id; set { _id = value; Notify(); } } // INotifyPropertyChanged hier zodat gelijk alle schermen geupdate worden als je een store wijzigt / verwijdert
+        // INotifyPropertyChanged hier zodat gelijk alle schermen geupdate worden als je een store wijzigt / verwijdert
+        public int ID { get => _id; set { _id = value; Notify(); } }
         public Customer Customer { get => _customer; set { _customer = value; Notify(); } }
         public ObservableCollection<Bike> Bikes { get => _bikes; set { _bikes = value; Notify(); } }
         public DateTime StartDate { get => _startDate; set { _startDate = value; Notify(); } }
